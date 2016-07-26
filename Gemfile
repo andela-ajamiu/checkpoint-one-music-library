@@ -3,6 +3,6 @@ source "https://rubygems.org"
 
 # gem "rails"
 
-gem 'rspec', '3.5.0'
+gem 'rspec'
 gem 'pry'
 gem 'require_all'
