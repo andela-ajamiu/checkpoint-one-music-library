@@ -39,10 +39,21 @@ class Song
 	end
 
 	def self.new_from_filename(filename)
+		artist, song, genre = extract_filename(filename)
+		Song.new(song,
+								Artist.find_or_create_by_name(artist),
+								Genre.find_or_create_by_name(genre))
 	end
 
 	def self.create_from_filename(filename)
-		@@all << filename
+		artist, song, genre = extract_filename(filename)
+		Song.create(song,
+								Artist.find_or_create_by_name(artist),
+								Genre.find_or_create_by_name(genre))
+	end
+
+	def self.extract_filename(filename)
+		arr_elements = filename.gsub(/.mp3/, '').split(' - ')
 	end
 
 end

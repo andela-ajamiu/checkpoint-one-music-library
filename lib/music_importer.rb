@@ -8,10 +8,11 @@ class MusicImporter
 	end
 
 	def files
-		@@all << 
+		Dir.entries(@path)[2..-1] 
 	end
 
-	def self.import
+	def import
+		files.each { |file| Song.create_from_filename(file)}
 	end
 
 end
