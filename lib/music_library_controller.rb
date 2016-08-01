@@ -5,13 +5,25 @@ class MusicLibraryController
     MusicImporter.new(path).import
   end
 
+  def music_cli_opts
+    {
+      'list songs' => :list_songs,
+      'list artists' => :list_artists,
+      'list genres' => :list_genres,
+      'play song' => :play_song,
+      'list artist' => :list_artist,
+      'list genre' => :list_genre
+    }
+  end
+
   def call
     puts 'Enter wat u wanna do: '
     input = ''
     while input != 'exit'
-      input = gets.chomp.downcase
-      # puts input
-      menu(input)
+      input = gets.chomp.downcase.tr(' ', '_').to_sym
+      if input.is_a? Symbol
+        send(input)
+      end
     end
   end
 
@@ -35,8 +47,7 @@ class MusicLibraryController
     when 'list genre'
       list_genre(gets)
 
-    else
-      puts 'dmhjddgd'
+    
 
     end
   end
