@@ -5,51 +5,35 @@ class MusicLibraryController
     MusicImporter.new(path).import
   end
 
-  def music_cli_opts
-    {
-      'list songs' => :list_songs,
-      'list artists' => :list_artists,
-      'list genres' => :list_genres,
-      'play song' => :play_song,
-      'list artist' => :list_artist,
-      'list genre' => :list_genre
-    }
-  end
-
   def call
-    puts 'Enter wat u wanna do: '
     input = ''
     while input != 'exit'
-      input = gets.chomp.downcase.tr(' ', '_').to_sym
-      if input.is_a? Symbol
-        send(input)
-      end
+      input = gets.chomp.downcase
+        menu(input)
     end
   end
 
   def menu(input)
     case input
-    when 'list songs'
-      list_songs
+      when 'list songs'
+        list_songs
 
-    when 'list artists'
-      list_artists
+      when 'list artists'
+        list_artists
 
-    when 'list genres'
-      list_genres
+      when 'list genres'
+        list_genres
 
-    when 'play song'
-      play_song(gets.to_i)
+      when 'play song'
+        play_song(gets.to_i)
 
-    when 'list artist'
-      list_artist(gets)
+      when 'list artist'
+        list_artist(gets)
 
-    when 'list genre'
-      list_genre(gets)
-
-    
-
+      when 'list genre'
+        list_genre(gets)
     end
+
   end
 
   def list_songs
