@@ -62,7 +62,7 @@ class MusicLibraryController
     if class_instance
       class_instance.songs.each { |song| puts "#{song}" }
     else
-      puts 'Name not Available'
+      puts "Name not Available"
     end
   end
 
