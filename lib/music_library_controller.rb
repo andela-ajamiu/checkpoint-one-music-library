@@ -43,7 +43,7 @@ class MusicLibraryController
 
 
   def list_artist
-    puts "Please enter the artist\'s name: "
+    puts "Please enter the artist\'s name:"
     artist_name = gets.chomp
     artist = Artist.find_by_name(artist_name)
     display_list(artist)    
@@ -51,7 +51,7 @@ class MusicLibraryController
 
 
   def list_genre
-    puts "Please enter the genre\'s name: "
+    puts "Please enter the genre\'s name:"
     genre_name = gets.chomp.downcase
     genre = Genre.find_by_name(genre_name)
     display_list(genre)    
