@@ -40,5 +40,5 @@ class Genre
     end
     @artists_store
   end
-  
+
 end

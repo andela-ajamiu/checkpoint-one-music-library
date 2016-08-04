@@ -59,4 +59,8 @@ class Song
     new_from_filename(filename).save
   end
 
+  def to_s
+    "#{self.artist.name} - #{self.name} - #{self.genre.name}"
+  end
+
 end

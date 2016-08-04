@@ -7,10 +7,6 @@ class MusicImporter
   end
 
 
-  # def files
-  #   Dir.entries(@path)[2..-1]
-  # end
-
   def files
     Dir.glob(File.join(@path, '*.mp3')).map { |f| File.basename(f) }
   end  
