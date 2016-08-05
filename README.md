@@ -1,7 +1,7 @@
 # Ruby Music Library 
 <a href="https://codeclimate.com/github/andela-ajamiu/checkpoint-one-music-library"><img src="https://codeclimate.com/github/andela-ajamiu/checkpoint-one-music-library/badges/gpa.svg" /></a>
 <a href="https://codeclimate.com/github/andela-ajamiu/checkpoint-one-music-library"><img src="https://codeclimate.com/github/andela-ajamiu/checkpoint-one-music-library/badges/issue_count.svg" /></a>
-<a href="https://travis-ci.org/andela-ajamiu/checkpoint-one-music-library"><img src="https://api.travis-ci.org/andela-ajamiu/checkpoint-one-music-library.svg?branch=master">
+<a href="https://travis-ci.org/andela-ajamiu/checkpoint-one-music-library"><img src="https://api.travis-ci.org/andela-ajamiu/checkpoint-one-music-library.svg?branch=master" /></a>
 
 A command line Music Library application implemented with ruby. The application accepts a file path to the music mp3 files, parses them and is able to display, search, create and 'play' the music. The application uses the specified path to import music files with names having the format below:
 
@@ -79,10 +79,10 @@ $ bin/musiclibrary
     ```
 
 ## Dependecies
-gem 'rspec'
-gem 'pry'
-gem 'require_all'
-gem 'colorize'
+gem 'rspec'<br>
+gem 'pry'<br>
+gem 'require_all'<br>
+gem 'colorize'<br>
 you can also refer to the Gemfile for list of dependencies.
 
 
