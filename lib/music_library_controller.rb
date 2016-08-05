@@ -33,8 +33,8 @@ class MusicLibraryController
 
 
   def list_genres
-    Genre.all.each.with_index(1) do |genre, index|
-      puts "#{index}. #{genre.name}".yellow
+    Genre.all.each do |genre|
+      puts "#{genre.name}".yellow
     end
   end
 
