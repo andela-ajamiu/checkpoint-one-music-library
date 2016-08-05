@@ -9,7 +9,8 @@ class MusicLibraryController
 
   def call
     Info.greetings
-    while true
+    menu = true
+    while menu
       Info.help
       input = gets.chomp.downcase.tr(" ", "_")
       break if input=="exit"
