@@ -79,6 +79,7 @@ class MusicLibraryController
     end
   end
 
+
   def method_missing?(_method_name, *_args)
     puts "The command you entered is invalid"
   end  
