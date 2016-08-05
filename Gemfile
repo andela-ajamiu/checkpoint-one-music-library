@@ -6,8 +6,4 @@ source "https://rubygems.org"
 gem 'rspec'
 gem 'pry'
 gem 'require_all'
-<<<<<<< HEAD
 gem 'colorize'
-=======
-gem 'colorize'
->>>>>>> bg-travis
