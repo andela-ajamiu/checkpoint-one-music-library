@@ -13,7 +13,6 @@ class MusicLibraryController
     while menu
       Info.help
       input = gets.chomp.downcase.tr(" ", "_")
-      break if input=="exit"
       send(input)
     end
   end
@@ -80,7 +79,13 @@ class MusicLibraryController
   end
 
 
-  def method_missing?(_method_name, *_args)
+  def exit
+    puts "Thanks for using our application".yellow
+    exit!
+  end
+
+
+  def method_missing(_method_name, *_args)
     puts "The command you entered is invalid"
   end  
 
