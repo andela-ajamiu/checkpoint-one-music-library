@@ -1,7 +1,7 @@
 module Concerns::Findable
 
   def find_by_name(name)
-    all.find { |element| element.name == name }
+    all.detect { |element| element.name == name }
   end
 
 

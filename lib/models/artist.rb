@@ -18,12 +18,6 @@ class Artist
   end
 
 
-  def save
-    @@all << self
-    self
-  end
-
-
   def self.destroy_all
     @@all.clear
   end
@@ -34,15 +28,25 @@ class Artist
   end
 
 
+  def save
+    @@all << self
+    self
+  end
+
+
   def add_song(song)
-    @songs << song unless @songs.include?(song)
+    if !(@songs.include?(song))
+      @songs << song
+    end
     song.artist ||= self
   end
 
 
   def genres
     @songs.each do |song|
-      @genres_store << song.genre unless @genres_store.include?(song.genre)
+      if !(@genres_store.include?(song.genre))
+        @genres_store << song.genre
+      end
     end
     @genres_store
   end
