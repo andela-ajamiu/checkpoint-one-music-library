@@ -42,7 +42,7 @@ class MusicLibraryController
   def play_song
     puts "Please enter the song number:".yellow
     song_no = gets.chomp.to_i
-    if song_no < 1 || song_no > Song.all.size
+    if song_no.class != Fixnum || song_no < 1 || song_no > Song.all.size
       puts "Please enter a song number between 1-#{Song.all.size}".red
       play_song
     else
