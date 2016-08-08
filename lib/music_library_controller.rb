@@ -9,10 +9,10 @@ class MusicLibraryController
 
   def call
     Info.greetings
-    menu = true
-    while menu
+    loop do
       Info.help
       input = gets.chomp.downcase.tr(" ", "_")
+      break if input == "exit"
       send(input)
     end
   end
@@ -53,7 +53,7 @@ class MusicLibraryController
 
 
   def list_artist
-    puts "Please enter the artist\'s name:".yellow
+    puts "Please enter the artist\'s name (Capitalized Case) :".yellow
     artist_name = gets.chomp
     artist = Artist.find_by_name(artist_name)
     display_list(artist)
@@ -64,13 +64,13 @@ class MusicLibraryController
     puts "Please enter the genre\'s name:".yellow
     genre_name = gets.chomp.downcase
     genre = Genre.find_by_name(genre_name)
-    display_list(genre)    
+    display_list(genre)
   end
 
 
   def display_list(class_instance)
     if class_instance == nil
-      puts "#{class_instance} does not exist".red
+      puts "The name you entered does not exist".red
     else
       class_instance.songs.each.with_index(1) do |song, index|
       puts "#{index}. #{song}".yellow
@@ -79,14 +79,8 @@ class MusicLibraryController
   end
 
 
-  def exit
-    puts "Thanks for using our application".yellow
-    exit!
-  end
-
-
   def method_missing(_method_name, *_args)
     puts "The command you entered is invalid"
-  end  
+  end
 
 end
