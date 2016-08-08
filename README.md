@@ -1,8 +1,8 @@
 # Ruby Music Library 
 <a href="https://codeclimate.com/github/andela-ajamiu/checkpoint-one-music-library"><img src="https://codeclimate.com/github/andela-ajamiu/checkpoint-one-music-library/badges/gpa.svg" /></a>
 <a href="https://codeclimate.com/github/andela-ajamiu/checkpoint-one-music-library"><img src="https://codeclimate.com/github/andela-ajamiu/checkpoint-one-music-library/badges/issue_count.svg" /></a>
-<a href="https://codeclimate.com/github/andela-ajamiu/checkpoint-one-music-library/coverage"><img src="https://codeclimate.com/github/andela-ajamiu/checkpoint-one-music-library/badges/coverage.svg" /></a>
 <a href="https://travis-ci.org/andela-ajamiu/checkpoint-one-music-library"><img src="https://api.travis-ci.org/andela-ajamiu/checkpoint-one-music-library.svg?branch=master" /></a>
+[![Test Coverage](https://codeclimate.com/github/andela-ajamiu/checkpoint-one-music-library/badges/coverage.svg)](https://codeclimate.com/github/andela-ajamiu/checkpoint-one-music-library/coverage)
 
 A command line Music Library application implemented with ruby. The application accepts a file path to the music mp3 files, parses them and is able to display, search, create and 'play' the music. The application uses the specified path to import music files with names having the format below:
 
