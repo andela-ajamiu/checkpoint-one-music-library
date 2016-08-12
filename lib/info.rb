@@ -1,5 +1,4 @@
 class Info
-
   def self.greetings
     puts <<-GREETINGS.cyan
       =============================================================
@@ -7,7 +6,6 @@ class Info
       =============================================================
       GREETINGS
   end
-
 
   def self.help
     puts <<-HELP.green
@@ -24,5 +22,4 @@ class Info
       HELP
     puts "Please enter any of the commands above....".cyan
   end
-
 end
